@@ -1,0 +1,10 @@
+线程队列 线程容器
+
+BlockingQueue 测试类BlockingQueueTest
+	BlockingQueue，如果BlockingQueue是空的，从BlockingQueue取东西的操作将会被阻断进入等待状态，
+	直到BlockingQueue进了东西才会被唤醒，同样，如果BlockingQueue是满的，
+	任何试图往里存东西的操作也会被阻断进入等待状态，直到BlockingQueue里有空间时才会被唤醒继续操作。
+	
+	测试类BlockingQueueTest实现一个篮子程序，不过这个篮子中最多能放得苹果数不是1，可以随意指定。
+	当篮子满时，生产者进入等待状态，当篮子空时，消费者等待。
+
