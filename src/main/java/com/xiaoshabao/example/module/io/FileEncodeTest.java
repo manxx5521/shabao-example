@@ -1,4 +1,4 @@
-package com.xiaoshabao.example.module.file;
+package com.xiaoshabao.example.module.io;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
