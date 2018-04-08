@@ -57,4 +57,14 @@ class Student extends Person implements Serializable {
 
   private static final long serialVersionUID = 1L;
 
+@Override
+public String getName() {
+	return super.getName();
+}
+
+@Override
+public void setName(String name) {
+	super.setName(name);
+}
+  
 }

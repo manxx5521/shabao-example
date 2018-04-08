@@ -37,7 +37,7 @@ import springfox.documentation.annotations.ApiIgnore;
 @Api(value = "演示controller", tags = { "演示界面" })
 @RestController
 @RequestMapping(value = "/demo")
-public class DemoController {
+public class DemoController extends BaseController{
 	@Autowired
 	private DemoService demoService;
 
