@@ -24,9 +24,20 @@ public class MapTest {
 	public void test() {
 		Map<String, String> params = new HashMap<String, String>();
 		String name = params.get("name");
-		System.out.println(name == null ? "是空值" : name);// 结果 是空值
+		System.out.println(name == null ? "是空值" : name);// 结果 是空值(null)
 	}
 
+	/**
+	 * 1.8遍历方式
+	 */
+	@Test
+	public void traverseMap8() {
+		hm.forEach((k,v)->{
+			// 输出内容
+			System.out.println(k + "\t" + v);
+		});
+	}
+	
 	/**
 	 * 遍历一个map有很多种方式,但是以以下方式性能最优。
 	 * <p>
@@ -38,12 +49,10 @@ public class MapTest {
 	 */
 	@Test
 	public void traverseMap() {
-		Set<Map.Entry<String, String>> entrySet = hm.entrySet();
-
-		Iterator<Map.Entry<String, String>> iter = entrySet.iterator();
+//		Set<Map.Entry<String, String>> entrySet = hm.entrySet();
+		Iterator<Map.Entry<String, String>> iter = hm.entrySet().iterator();
 		while (iter.hasNext()) {
 			Map.Entry<String, String> entry = iter.next();
-
 			// 输出内容
 			System.out.println(entry.getKey() + "\t" + entry.getValue());
 		}
