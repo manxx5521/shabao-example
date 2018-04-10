@@ -89,7 +89,8 @@ public class DemoController extends BaseController{
 	/**
 	 * 清空现有缓存
 	 * <p>
-	 * 存储缓存在 DemoMapper里
+	 * 存储缓存在 DemoMapper里<br>
+	 * 缓存使用的是代理模式，类内互相调用不走缓存，并且返回值要实现序列化接口
 	 * </p>
 	 * 
 	 * @return
