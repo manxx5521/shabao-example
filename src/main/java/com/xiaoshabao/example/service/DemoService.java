@@ -18,5 +18,6 @@ public interface DemoService {
 	 * @return
 	 */
 	public boolean insert(DemoEntity demoEntity);
+	
 
 }
