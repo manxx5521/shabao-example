@@ -3,7 +3,8 @@ package com.xiaoshabao.example.module.awtandswing.awt;
 import java.awt.Color;
 import java.awt.Frame;
 import java.awt.Panel;
-import java.awt.event.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class FrameAddPanel extends Frame{  //面板panel加到窗口Frame里
 	private static final long serialVersionUID = -5572755464499211787L;

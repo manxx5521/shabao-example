@@ -1,10 +1,15 @@
 package com.xiaoshabao.example.module.awtandswing.awt;
 
+import java.awt.BorderLayout;
+import java.awt.Button;
+import java.awt.CardLayout;
+import java.awt.FlowLayout;
+import java.awt.Frame;
+import java.awt.Panel;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.awt.*;
 
 /**
  * 卡片布局管理 可以同过CardLayout(int x,int y);指定水平距离和垂直间距

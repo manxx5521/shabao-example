@@ -1,6 +1,11 @@
 package com.xiaoshabao.example.util;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -17,9 +22,32 @@ public class JdbcUtil {
 	private PreparedStatement pstmt;
 	// 定义查询返回的结果集合
 	private ResultSet rs;
+	
+	enum DriverType{
+		MYSQL("com.mysql.jdbc.Driver");
+		private String name;
+		private DriverType(String name) {
+			this.name=name;
+		}
+		public String getName() {
+			return name;
+		}
+	}
 
 	// 初始化
+	public JdbcUtil(String url, String username, String password) {
+		this.init(DriverType.MYSQL.getName(), url, username, password);
+	}
+
+	public JdbcUtil(DriverType type, String url, String username, String password) {
+		this.init(type.getName(), url, username, password);
+	}
+
 	public JdbcUtil(String driver, String url, String username, String password) {
+		this.init(driver, url, username, password);
+	}
+	
+	private void init(String driver, String url, String username, String password){
 		try {
 			Class.forName(driver);
 			conn = DriverManager.getConnection(url, username, password);

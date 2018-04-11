@@ -1,6 +1,7 @@
 package com.xiaoshabao.example.module.mail;
 
-import javax.mail.*;
+import javax.mail.Authenticator;
+import javax.mail.PasswordAuthentication;
 
 /**
  * 密码验证器

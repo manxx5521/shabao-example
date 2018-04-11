@@ -1,7 +1,13 @@
 package com.xiaoshabao.example.module.awtandswing.event;
 
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.Frame;
+import java.awt.GridLayout;
+import java.awt.TextArea;
+import java.awt.TextField;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class FocusEventDemo extends Frame{
 	private static final long serialVersionUID = 3762495049449870227L;

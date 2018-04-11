@@ -1,6 +1,10 @@
 package com.xiaoshabao.example.module.awtandswing.component;
 
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Frame;
+import java.awt.GridLayout;
+import java.awt.Label;
+import java.awt.Scrollbar;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 

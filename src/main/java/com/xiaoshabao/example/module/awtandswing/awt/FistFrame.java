@@ -2,7 +2,8 @@ package com.xiaoshabao.example.module.awtandswing.awt;
 
 import java.awt.Color;
 import java.awt.Frame;
-import java.awt.event.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class FistFrame extends Frame{  //所有‘窗口’的框架继承于Frame
 	private static final long serialVersionUID = 7702620011122755607L;

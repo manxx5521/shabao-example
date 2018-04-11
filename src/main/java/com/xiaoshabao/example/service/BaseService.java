@@ -1,8 +1,8 @@
 package com.xiaoshabao.example.service;
 
-import org.apache.ibatis.annotations.Param;
-
 import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
 
 /**
  * BaseService接口

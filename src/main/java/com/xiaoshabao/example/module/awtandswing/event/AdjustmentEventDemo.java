@@ -1,7 +1,15 @@
 package com.xiaoshabao.example.module.awtandswing.event;
 
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.Color;
+import java.awt.Frame;
+import java.awt.GridLayout;
+import java.awt.Label;
+import java.awt.Scrollbar;
+import java.awt.TextField;
+import java.awt.event.AdjustmentEvent;
+import java.awt.event.AdjustmentListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class AdjustmentEventDemo extends Frame{
 	private static final long serialVersionUID = 5560141900906761472L;

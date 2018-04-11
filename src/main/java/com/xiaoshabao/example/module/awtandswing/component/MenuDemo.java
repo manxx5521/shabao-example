@@ -1,7 +1,15 @@
 package com.xiaoshabao.example.module.awtandswing.component;
 
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Frame;
+import java.awt.Menu;
+import java.awt.MenuBar;
+import java.awt.PopupMenu;
+import java.awt.TextArea;
+import java.awt.event.MouseAdapter;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class MenuDemo extends Frame{
 	private static final long serialVersionUID = -6919578898789601835L;

@@ -2,6 +2,7 @@ package com.xiaoshabao.example.module.mail;
 
 import java.util.Date;
 import java.util.Properties;
+
 import javax.mail.Address;
 import javax.mail.BodyPart;
 import javax.mail.Message;

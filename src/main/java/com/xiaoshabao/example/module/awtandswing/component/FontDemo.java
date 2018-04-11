@@ -1,6 +1,9 @@
 package com.xiaoshabao.example.module.awtandswing.component;
 
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Frame;
+import java.awt.Graphics;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 

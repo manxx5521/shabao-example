@@ -7,8 +7,6 @@ import java.util.List;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.session.SqlSession;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import com.github.pagehelper.PageHelper;
 import com.xiaoshabao.example.service.BaseService;
@@ -19,9 +17,6 @@ import com.xiaoshabao.example.service.BaseService;
  */
 public abstract class BaseServiceImpl<Mapper, Record, Example> implements BaseService<Record, Example> {
 	
-	@Autowired  
-	private SqlSession sqlSession;  
-
 	public Mapper mapper;
 
 	@Override

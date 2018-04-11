@@ -1,7 +1,11 @@
 package com.xiaoshabao.example.module.awtandswing.awt;
 
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.Frame;
+import java.awt.Panel;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 //嵌套程序
 public class NestedContainer {

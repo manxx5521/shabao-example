@@ -1,7 +1,11 @@
 package com.xiaoshabao.example.module.awtandswing.swing;
 
-import java.awt.*;
-import javax.swing.*;
+import java.awt.BorderLayout;
+import java.awt.Container;
+
+import javax.swing.Box;
+import javax.swing.JButton;
+import javax.swing.JFrame;
 
 public class BoxLayoutDemo {
 	 public static void main(String[] args){
