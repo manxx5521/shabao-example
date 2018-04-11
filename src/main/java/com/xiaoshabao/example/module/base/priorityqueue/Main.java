@@ -11,8 +11,7 @@ public class Main {
 		Thread taskThreads[] = new Thread[5];
 		// 创建5个Task对象。存储前面创建的线程数组
 		for (int i = 0; i < taskThreads.length; i++) {
-			PriorityBlockingQueueTask task = new PriorityBlockingQueueTask(i,
-					queue);
+			PriorityBlockingQueueTask task = new PriorityBlockingQueueTask(i, queue);
 			taskThreads[i] = new Thread(task);
 		}
 
@@ -30,18 +29,16 @@ public class Main {
 			}
 		}
 
-		//将列队真实大小和存储在它里面的事件写入到控制台。使用poll()方法从队列中取出事件
+		// 将列队真实大小和存储在它里面的事件写入到控制台。使用poll()方法从队列中取出事件
 		System.out.printf("Main: Queue Size: %d\n", queue.size());
 		for (int i = 0; i < taskThreads.length * 1000; i++) {
 			Event event = queue.poll();
-			System.out.printf("Thread %s: Priority %d\n", event.getThread(),
-					event.getPriority());
+			System.out.printf("Thread %s: Priority %d\n", event.getThread(), event.getPriority());
 		}
-		
-		//将队列最后的大小写入到控制台。
-		System.out.printf("Main: Queue Size: %d\n",queue.size());
-		System.out.printf("Main: End of the program\n");
 
+		// 将队列最后的大小写入到控制台。
+		System.out.printf("Main: Queue Size: %d\n", queue.size());
+		System.out.printf("Main: End of the program\n");
 
 	}
 
