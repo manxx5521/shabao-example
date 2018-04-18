@@ -70,6 +70,12 @@
 			<artifactId>pagehelper-spring-boot-starter</artifactId>
 			<version>RELEASE</version>
 		</dependency>
+		
+		<!-- jpa依赖 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
 
 		<!-- commons 功能包 begin -->
 		<dependency>

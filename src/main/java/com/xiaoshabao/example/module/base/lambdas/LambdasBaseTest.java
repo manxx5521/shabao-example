@@ -79,6 +79,9 @@ public class LambdasBaseTest {
 			});
 		System.out.println("年龄大于20："+rs);
 		
+		//使用多参数输出
+		rs=able.parser1("多参数",persion -> persion.getAge() > 20);
+		System.out.println("多参数,年龄大于20："+rs);
 
 	}
 
@@ -112,6 +115,12 @@ class ParserAble {
 			}
 		}
 		return sb.toString();
+	}
+	/**
+	 * 测试多参数
+	 */
+	public String parser1(String title,Predicate<Persion> function) {
+		return parser1(function);
 	}
 }
 
