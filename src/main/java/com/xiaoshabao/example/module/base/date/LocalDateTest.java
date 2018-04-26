@@ -62,8 +62,10 @@ public class LocalDateTest {
 		System.out.println("当前时间："+now);
 		
 		//格式化指定日期：2018-04-08 10:33:09
-		String formatDate=LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+		String formatDate=now.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
 		System.out.println("输出格式化日期："+formatDate);
+		
+		System.out.println("添加了5分钟："+now.plusSeconds(5*60).format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
 		
 		//计算过去了 多少秒
 		Instant.now().toEpochMilli();
