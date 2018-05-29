@@ -226,12 +226,18 @@
 			<groupId>com.rabbitmq</groupId>
 			<artifactId>amqp-client</artifactId>
 		</dependency>
-		<!-- lucene全文搜索 -->
+		<!-- lucene核心包 -->
 		<dependency>
 			<groupId>org.apache.lucene</groupId>
 			<artifactId>lucene-core</artifactId>
 			<version>7.3.1</version>
 		</dependency>
+		<!-- lucene 解析搜索请求 -->
+		<dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-queryparser</artifactId>
+            <version>7.3.1</version>
+        </dependency>
 
 	</dependencies>
 
