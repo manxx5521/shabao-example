@@ -41,6 +41,15 @@ public class FilePathTest {
 		}
 
 	}
+	
+	/**
+	 * 获得当前classPath目录下的文件
+	 */
+	@Test
+	public void classpath() {
+		this.getClass().getResourceAsStream("/templates/demo.ftl");
+//		FileUtils.copyInputStreamToFile(source, destination);
+	}
 	@Test
 	public void test() {
 		File file=new File("E:\\test");

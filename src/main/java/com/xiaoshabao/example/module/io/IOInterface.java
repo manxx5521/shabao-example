@@ -15,6 +15,11 @@ public interface IOInterface {
   /**字符串直接读取到输入流**/
   void toInputStreanByString(String content);
   
+  /**
+   * 将输入流InputStream写入文件
+   */
+  void writeInputStreamToFile();
+  
   
 
 }
