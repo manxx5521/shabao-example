@@ -3,7 +3,6 @@ package com.xiaoshabao.example.module.codec;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.junit.Test;
 
