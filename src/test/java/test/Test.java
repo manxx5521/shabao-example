@@ -34,9 +34,16 @@ public class Test{
         json.put("ROW_ID", "4D079A1A877348FB9F693EA9B9BC45A2");
         json.put("STATUS", "2");
         
+        json.put("userId", "sa");
+        json.put("coCode", "900001");
+        json.put("nd", "2017");
         
-        String rs=doHttp("http://10.15.0.187:8001/PD/JjbMessage",json.toJSONString());
+        
+//        String rs=doHttp("http://10.15.0.187:8001/PD/JjbMessage",json.toJSONString());
+//        String rs=doHttp("http://192.168.50.210:6777/PD/JjbMessage",json.toJSONString());
+        String rs=doHttp("http://192.168.50.210:6777/IS/WorkTask",json.toJSONString());
 		System.out.println(rs);
+		
 		
 	}
 

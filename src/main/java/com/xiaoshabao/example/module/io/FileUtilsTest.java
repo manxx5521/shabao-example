@@ -107,10 +107,9 @@ public class FileUtilsTest {
 	@Test
 	public void testIterator() throws IOException {
 		File file = new File(basePath + "a.txt");
-		try(LineIterator li = FileUtils.lineIterator(file);){
-			while (li.hasNext()) {
-				System.out.println(li.nextLine());
-			}
+		LineIterator li = FileUtils.lineIterator(file);
+		while (li.hasNext()) {
+			System.out.println(li.nextLine());
 		}
 	}
 

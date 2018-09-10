@@ -6,8 +6,8 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>博客项目</name>
-	<description>个人博客项目</description>
+	<name>示例项目</name>
+	<description>示例项目</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -21,21 +21,17 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<dependencies>
-		<!-- springboot依赖 -->
+		<!-- 基础包 -->
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
+			<groupId>com.xiaoshabao</groupId>
+			<artifactId>shabao-base-mybatis</artifactId>
+			<version>0.0.1</version>
 		</dependency>
 		<!-- 引入测试包 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-		</dependency>
-		<!-- 引入web依赖 -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<!-- AOP支持 -->
 		<dependency>
@@ -52,18 +48,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-freemarker</artifactId>
 		</dependency>
-		<!-- 数据库驱动 无需添加版本号 -->
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-		<!-- mybatis相关依赖 -->
-		<dependency>
-			<groupId>org.mybatis.spring.boot</groupId>
-			<artifactId>mybatis-spring-boot-starter</artifactId>
-			<version>1.3.1</version>
-		</dependency>
 		<!--分页pagehelper -->
 		<dependency>
 			<groupId>com.github.pagehelper</groupId>
@@ -75,22 +59,6 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-
-		<!-- commons 功能包 begin -->
-		<dependency>
-			<!-- java加密包 -->
-			<groupId>commons-codec</groupId>
-			<artifactId>commons-codec</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-			<version>2.6</version>
 		</dependency>
 
 		<!-- bean相关处理 -->
@@ -145,12 +113,6 @@
 
 		<!-- 解析 begin -->
 
-		<!-- 阿里巴巴提供的JSON转换包 -->
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>fastjson</artifactId>
-			<version>1.2.8</version>
-		</dependency>
 		<!-- json lib这个已经很久不更新了 -->
 		<dependency>
 			<groupId>net.sf.json-lib</groupId>

@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.alibaba.fastjson.JSONObject;
+import com.xiaoshabao.base.component.validateApi.AddTokenApi;
+import com.xiaoshabao.base.component.validateApi.ValidateApi;
 import com.xiaoshabao.example.entity.DemoEntity;
 import com.xiaoshabao.example.service.DemoService;
 
@@ -84,6 +87,19 @@ public class DemoController extends BaseController{
 	public boolean delete(@PathVariable("id") Integer id) {
 		// 测试数据
 		return true;
+	}
+	
+	@ApiOperation(value = "验证api请求", notes = "验证简单加密")
+	@GetMapping("/test")
+	@AddTokenApi("test")
+	@ValidateApi("test")
+	@ApiImplicitParams({ @ApiImplicitParam(name = "request_time", value = "验证请求时间", required = true,paramType = "header", dataType = "String"),
+		@ApiImplicitParam(name = "request_token", value = "验证请求加密串", required = true,paramType = "header", dataType = "String")})
+	public JSONObject testApi(String request_time,String request_token) {
+		// 测试数据
+		JSONObject result=new JSONObject();
+		result.put("status", true);
+		return result;
 	}
 
 	/**
