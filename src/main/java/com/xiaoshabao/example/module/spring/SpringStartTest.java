@@ -8,13 +8,19 @@ public class SpringStartTest {
 	
 	@Test
 	public void test() {
+		try {
+			@SuppressWarnings("resource")
+			BeanFactory beanFactory=new FileSystemXmlApplicationContext(new String[]{"src\\main\\java\\com\\xiaoshabao\\example\\module\\spring\\applicationContext-test.xml"});
 
-	    @SuppressWarnings("resource")
-		BeanFactory beanFactory=new FileSystemXmlApplicationContext(new String[]{"src\\main\\java\\com\\xiaoshabao\\example\\module\\spring\\applicationContext-test.xml"});
+		    SpringTestBean bean= beanFactory.getBean("springTestBean",SpringTestBean.class);
+		    
+		    System.out.println(bean.getName());
+		} catch (Exception e) {
+			e.printStackTrace();
+			assert false;
+		}
 
-	    SpringTestBean bean= beanFactory.getBean("springTestBean",SpringTestBean.class);
 	    
-	    System.out.println(bean.getName());
 	}
 
 }
