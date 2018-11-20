@@ -46,7 +46,6 @@ public class Dom4jTest {
 			System.out.println("=====开始遍历某一本书=====");
 			Element book = (Element) it.next();
 			// 获取book的属性名以及 属性值
-			@SuppressWarnings("unchecked")
 			List<Attribute> bookAttrs = book.attributes();
 			for (Attribute attr : bookAttrs) {
 				System.out.println("属性名：" + attr.getName() + "--属性值："
