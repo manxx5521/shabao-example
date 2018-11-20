@@ -31,17 +31,17 @@ public class Test{
         JSONObject json=new JSONObject();
         json.put("PWD_TIME", time);
         json.put("PWD_VALUE", sha);
-        json.put("ROW_ID", "4D079A1A877348FB9F693EA9B9BC45A2");
+        json.put("ROW_ID", "CE2091D78D7E4CC89651546EE8436596");
         json.put("STATUS", "2");
         
-        json.put("userId", "sa");
+        /*json.put("userId", "sa");
         json.put("coCode", "900001");
-        json.put("nd", "2017");
+        json.put("nd", "2017");*/
         
         
-//        String rs=doHttp("http://10.15.0.187:8001/PD/JjbMessage",json.toJSONString());
+        String rs=doHttp("http://10.15.0.187:7001/PD/JjbMessage",json.toJSONString());
 //        String rs=doHttp("http://192.168.50.210:6777/PD/JjbMessage",json.toJSONString());
-        String rs=doHttp("http://192.168.50.210:6777/IS/WorkTask",json.toJSONString());
+//        String rs=doHttp("http://192.168.50.210:6777/IS/WorkTask",json.toJSONString());
 		System.out.println(rs);
 		
 		
