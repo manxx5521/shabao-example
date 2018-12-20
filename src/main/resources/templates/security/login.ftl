@@ -10,8 +10,8 @@
 <body>
 	  <h1>登录<#if error??>11111---${error!}</#if></h1>
 	  <form id="form1">
-	  	<input type="text" name="id"/>
-	  	<input type="text" name="name"/>
+	  	<input type="text" name="user"/>
+	  	<input type="text" name="password"/>
 	  	<button type="button">提交</button>
 	  </form>
 	  <script>
