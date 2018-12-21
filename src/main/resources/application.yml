@@ -1,6 +1,7 @@
 server:
   port: 8080
-  
+  tomcat:
+    max-http-header-size: 3145728  
 spring:
   application:
     name: shabao-example
@@ -55,6 +56,6 @@ mybatis-plus:
 
 logging:
   level:
-    root: INFO
+    root: DEBUG
     com.xiaoshabao.example.mapper: DEBUG
 #  path: C:/logs/log.log

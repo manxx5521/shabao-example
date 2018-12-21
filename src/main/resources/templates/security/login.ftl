@@ -10,7 +10,7 @@
 <body>
 	  <h1>登录<#if error??>11111---${error!}</#if></h1>
 	  <form id="form1">
-	  	<input type="text" name="user"/>
+	  	<input type="text" name="username"/>
 	  	<input type="text" name="password"/>
 	  	<button type="button">提交</button>
 	  </form>
@@ -34,7 +34,7 @@
 						}
 					},
 					error:function(XMLHttpRequest, textStatus, errorThrown) {
-						console.log(errorThrown)
+						//console.log(errorThrown)
 						alert('系统错误');
 					}
 				});

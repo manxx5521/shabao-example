@@ -1,14 +1,12 @@
 package com.xiaoshabao.example.custom.security;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 /**
  * 开启Servlet过滤器验证
  */
@@ -30,6 +28,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 				.and()
 			.formLogin()
 				.loginPage("/security/login")//登录页面
+				.successHandler(new LoginAuthenticationHandler())//登录之后处理
+				.failureHandler(new LoginAuthenticationHandler())//登录失败后处理
 				.permitAll()//授予所有用户（即未经身份验证的用户）访问我们的登录页面
 				.and()
 			.logout()
@@ -41,16 +41,29 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 //				.deleteCookies(cookieNamesToClear)//注销成功时删除的cookies的名称。 这是明确添加`CookieClearingLogoutHandler`的快捷方式
 				.permitAll();
 	}
-
-    /*@Bean
-    public UserDetailsService userDetailsService() throws Exception {
-        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
-        manager.createUser(User.withDefaultPasswordEncoder().username("user").password("password").roles("USER").build());
-        return manager;
-    }*/
 	
-	@Autowired
-	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-		auth.inMemoryAuthentication().withUser(User.withDefaultPasswordEncoder().username("user").password("password").roles("USER"));
+	// 配置认证管理器
+	@Override
+	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+		// 通过实现userDetailsService接口类重写loadUserByUsername()方法返回UserDetails进行密码匹配
+		auth.userDetailsService(springDataUserDetailsService()).passwordEncoder(passwordEncoder());
 	}
+	
+	/**
+	 * 自定义登录验证类
+	 * @return
+	 */
+	@Bean
+	public UserDetailsService springDataUserDetailsService() {
+	    return new MyUserDetailsService();
+	}
+	
+	/**
+	 * 使用密码管理器
+	 */
+	@Bean
+	public BCryptPasswordEncoder passwordEncoder() {
+	    return new BCryptPasswordEncoder();
+	}
+
 }

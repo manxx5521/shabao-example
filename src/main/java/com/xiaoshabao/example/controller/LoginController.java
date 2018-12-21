@@ -17,7 +17,11 @@ public class LoginController extends BaseController{
 	
 	
 	@GetMapping("/login")
-	public ModelAndView getList(@ApiIgnore() ModelMap model) {
+	public ModelAndView getList(@ApiIgnore() ModelMap model,String error) {
 		return new ModelAndView("security/login", model);
+	}
+	@GetMapping("/index")
+	public ModelAndView getIndex(@ApiIgnore() ModelMap model) {
+		return new ModelAndView("security/index", model);
 	}
 }
