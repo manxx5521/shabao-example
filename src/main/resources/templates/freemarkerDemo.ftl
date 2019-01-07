@@ -5,6 +5,7 @@
 
 基本类型boolean转换时，会将true转换成yes和no
 可以通过string自定义转换 ${booleanStr?string('正确','错误')}
+<#-- 注释 --->
 ************************/
 
 ${user}  取值
