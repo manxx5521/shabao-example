@@ -27,6 +27,7 @@ public class ExecutorsTest {
 		
 		pool.shutdown();
 		
+		//次检查之前要先shutdown
 		while(true) {
 			//关闭后所有任务都已完成,则返回true
 			if(pool.isTerminated()) {
