@@ -6,22 +6,24 @@ import org.junit.Test;
 
 public class FilePathTest {
 
-	private final static String FILE_NAME = "fileTestTxt.txt";
+	public final static String FILE_NAME = "fileTestTxt.txt";
 
 	/**
-	 * 获得当前目录的文件
+	 * 当前文件 绝对目录
 	 */
-	public String getCurrentPathFile() {
+	@Test
+	public void test_CurrentPathFile() {
 		String path = FilePathTest.class.getClass().getResource("/").getPath();
-		System.out.println(path);
-		return path;
+		System.out.println(path);//输出 /E:/workss/shabao/shabao-example/target/test-classes/
 	}
-
+	
 	/**
 	 * 工程目录
 	 */
-	public String getUserDir() {
-		return System.getProperty("user.dir");
+	@Test
+	public void test_userDir() {
+		String path= System.getProperty("user.dir");
+		System.out.println(path);//输出 E:\workss\shabao\shabao-example
 	}
 
 	/**
@@ -30,8 +32,8 @@ public class FilePathTest {
 	 * 对于windows来说，/和\\都能识别
 	 * <p>
 	 */
+	@Test
 	public void winPathSp() {
-
 		String path = "D:\\workspaces\\test\\src\\test\\file\\";
 		// String path="D:/workspaces/test/src/test/file/";
 
@@ -46,7 +48,7 @@ public class FilePathTest {
 	 * 获得当前classPath目录下的文件
 	 */
 	@Test
-	public void classpath() {
+	public void test_classpath() {
 		this.getClass().getResourceAsStream("/templates/demo.ftl");
 //		FileUtils.copyInputStreamToFile(source, destination);
 	}
@@ -57,13 +59,5 @@ public class FilePathTest {
 		System.out.println("22是否是文件夹->"+file.isDirectory());
 	}
 
-	public static void main(String[] args) {
-		FilePathTest test = new FilePathTest();
-		test.getUserDir();
-
-		File file = new File(test.getUserDir());
-		String filePath = file.getParent();
-		System.out.println(filePath);
-	}
 
 }
