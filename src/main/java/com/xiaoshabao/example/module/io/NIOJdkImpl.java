@@ -7,30 +7,35 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URI;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 import org.junit.Test;
 
 /**
  * JDK实现方式
  */
-public class IOJdkImpl implements IOInterface {
+public class NIOJdkImpl implements IOInterface {
+	
 	String FILE_PATH = this.getClass().getResource("fileTestTxt.txt").getPath();
+	
+	
 	/*
 	 * 将文件读取成 字符串
 	 */
 	@Override
 	@Test
 	public void test_readTxtToString() {
-		try (// 此处获得输入流
-				InputStream inputStrean = new FileInputStream(FILE_PATH)) {
-			
-
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+		try {
+//			String content=new String(Files.readAllBytes(Paths.get(("E://test/file.txt"))));
+			String content=new String(Files.readAllBytes(new File(FILE_PATH).toPath()));
+			System.out.println(content);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
+
 	@Override
 	public void toInputStrean() {
 	}
@@ -93,4 +98,6 @@ public class IOJdkImpl implements IOInterface {
 	private InputStream getInputStream() {
 		return this.getClass().getResourceAsStream("/templates/demo.ftl");
 	}
+
+	
 }

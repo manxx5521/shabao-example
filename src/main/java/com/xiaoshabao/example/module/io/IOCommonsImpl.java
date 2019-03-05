@@ -10,7 +10,13 @@ import org.apache.commons.io.FileUtils;
  * 辅助包实现方式
  */
 public class IOCommonsImpl implements IOInterface {
-
+	/*
+	 * 将文件读取成 字符串
+	 */
+	@Override
+	public void test_readTxtToString() {
+		
+	}
 	@Override
 	public void toInputStrean() {
 		// TODO Auto-generated method stub

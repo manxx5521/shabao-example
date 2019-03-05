@@ -19,7 +19,7 @@
 		<artifactId>shabao-base-parent</artifactId>
 		<version>0.0.1</version>
 	</parent>
-	
+
 	<dependencies>
 		<!-- 基础包 -->
 		<dependency>
@@ -195,10 +195,30 @@
 		</dependency>
 		<!-- lucene 解析搜索请求 -->
 		<dependency>
-            <groupId>org.apache.lucene</groupId>
-            <artifactId>lucene-queryparser</artifactId>
-            <version>7.3.1</version>
-        </dependency>
+			<groupId>org.apache.lucene</groupId>
+			<artifactId>lucene-queryparser</artifactId>
+			<version>7.3.1</version>
+		</dependency>
+		<!-- 脚本引擎 begin -->
+		<dependency>
+			<groupId>com.googlecode.aviator</groupId>
+			<artifactId>aviator</artifactId>
+			<version>4.1.2</version>
+		</dependency>
+		<!--最后更新2013年 -->
+		<dependency>
+			<groupId>org.eweb4j</groupId>
+			<artifactId>fel</artifactId>
+			<version>0.8</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>QLExpress</artifactId>
+			<version>3.2.2</version>
+		</dependency>
+
+		<!-- 脚本引擎 end -->
 
 	</dependencies>
 

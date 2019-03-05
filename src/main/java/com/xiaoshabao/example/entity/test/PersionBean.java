@@ -3,6 +3,14 @@ package com.xiaoshabao.example.entity.test;
 public class PersionBean {
 	private String name = "张三";
 	private int age = 10;
+	
+	public PersionBean() {
+	}
+	public PersionBean(String name, int age) {
+		super();
+		this.name = name;
+		this.age = age;
+	}
 
 	@Override
 	public String toString() {
