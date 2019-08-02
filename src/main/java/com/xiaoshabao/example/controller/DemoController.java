@@ -1,5 +1,7 @@
 package com.xiaoshabao.example.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.CacheManager;
 import org.springframework.ui.ModelMap;
@@ -8,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -66,15 +69,24 @@ public class DemoController extends BaseController{
 	}
 
 	@ApiOperation(value = "新增demo", notes = "新增")
-	@ApiImplicitParam(name = "demoEntity", value = "demo是实体", required = true, dataType = "DemoEntity")
+//	@ApiImplicitParam(name = "demoEntity", value = "demo是实体", required = true, dataType = "DemoEntity")
 	@PostMapping
 	public boolean add(DemoEntity demoEntity) {
 		return demoService.insert(demoEntity);
 	}
 
+	@ApiOperation(value = "测试传输jsonobject", notes = "更新")
+	@ApiImplicitParams({ 
+			@ApiImplicitParam(name = "data", value = "json数据", dataType = "JSONObject",example="{\"id\":\"1\"}") })
+	@PostMapping("/json")
+	public boolean reqJson(HttpServletRequest request,@RequestBody JSONObject data) {
+		// 返回测试信息
+		return true;
+	}
+	
 	@ApiOperation(value = "更新demo实体", notes = "更新")
-	@ApiImplicitParams({ @ApiImplicitParam(name = "id", value = "demo的id", required = true,paramType = "path", dataType = "Integer"),
-			@ApiImplicitParam(name = "demoEntity", value = "demo详细实体", required = true, dataType = "DemoEntity") })
+	@ApiImplicitParams({ @ApiImplicitParam(name = "id", value = "demo的id", required = true,paramType = "path", dataType = "Integer")/*,
+			@ApiImplicitParam(name = "demoEntity", value = "demo详细实体", required = true, dataType = "DemoEntity") */})
 	@PutMapping("/{id}")
 	public boolean update(@PathVariable("id") Integer id, DemoEntity demoEntity) {
 		// 返回测试信息

@@ -18,7 +18,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 	 */
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http
+		http.csrf().disable()
 			.authorizeRequests()
 				.antMatchers("/resources/**", "/signup", "/about").permitAll()//指定了任何用户都可以访问的多个网址格式
 				.antMatchers("/admin/**").hasRole("ADMIN")//以"/admin/"开头的网址将仅限于拥有角色"ROLE_ADMIN"的用户,由于我们调用了`hasRole`方法，因此我们不需要指定"ROLE_"前缀。
