@@ -26,6 +26,20 @@ public class MapTest {
 		String name = params.get("name");
 		System.out.println(name == null ? "是空值" : name);// 结果 是空值(null)
 	}
+	
+	
+	/**
+	 * idea推荐方式
+	 */
+	@Test
+  public void testidea() {
+    Map<String, Object> params = new HashMap<>();
+    
+    for (Map.Entry<String, Object> entry : params.entrySet()) {
+      System.out.println(entry.getKey());
+      System.out.println(entry.getValue());
+    }
+  }
 
 	/**
 	 * 1.8遍历方式
