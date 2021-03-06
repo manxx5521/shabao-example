@@ -2,20 +2,22 @@ package com.xiaoshabao.example.module.io;
 import java.io.IOException;
 
 import org.apache.commons.io.FileSystemUtils;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.Before;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 /**
  * 对文件系统的相关操作
  */
 @SuppressWarnings("deprecation")
 public class FileSystemUtilsTest {
-	@Before
+	@BeforeAll
 	public void setUp() throws Exception {
 	}
 
-	@After
+	@AfterAll
 	public void tearDown() throws Exception {
 	}
 

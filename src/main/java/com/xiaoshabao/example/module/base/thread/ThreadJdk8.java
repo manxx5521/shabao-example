@@ -3,7 +3,7 @@ package com.xiaoshabao.example.module.base.thread;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Future;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class ThreadJdk8 {
 

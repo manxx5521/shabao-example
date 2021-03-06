@@ -7,9 +7,11 @@ import org.apache.commons.io.comparator.CompositeFileComparator;
 import org.apache.commons.io.comparator.DirectoryFileComparator;
 import org.apache.commons.io.comparator.NameFileComparator;
 import org.apache.commons.io.comparator.PathFileComparator;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.Before;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 /**
  * 文件比较类<br/>
@@ -19,13 +21,13 @@ public class ComparatorTest {
 
 	private String basePath = null;
 
-	@Before
+	@BeforeAll
 	public void setUp() throws Exception {
 		// basePath = System.getProperty("user.dir") + "\\file\\";
 		basePath = "D:\\test\\";
 	}
 
-	@After
+	@AfterAll
 	public void tearDown() throws Exception {
 	}
 

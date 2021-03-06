@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.beanutils.BeanUtils;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * BeanUtils 示例代码

@@ -1,6 +1,6 @@
 package com.xiaoshabao.example.module.json.jsonlib;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;

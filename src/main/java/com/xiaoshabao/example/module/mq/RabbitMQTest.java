@@ -2,7 +2,7 @@ package com.xiaoshabao.example.module.mq;
 
 import java.io.IOException;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import com.rabbitmq.client.AMQP;
 import com.rabbitmq.client.Channel;

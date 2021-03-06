@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 /*
  * 实现序列化Serializable的类型经过方法时，会重新变为局部变量。
  * 不实现的指针不变，在方法内值改变，源方法的变量变化。

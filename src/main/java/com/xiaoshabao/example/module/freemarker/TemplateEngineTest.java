@@ -1,6 +1,6 @@
 package com.xiaoshabao.example.module.freemarker;
 
-import static org.junit.Assert.fail;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -8,12 +8,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class TemplateEngineTest {
 	
 	/**
-	 * 示例模版 /shabao-example/src/main/resources/templates/freemarkerDemo.ftl
+	 * 示例模版 /shabao-example/src/main/resources/templates/freemarkerDemo.ftlh
 	 */
 	@Test
 	public void test() {
@@ -47,7 +47,7 @@ public class TemplateEngineTest {
 			//设置自定义指令
 			TemplateEngine.setSharedVariable("role", new FreemarkerRoleDirectiveModel());
 			
-			String result=TemplateEngine.renderTemplate("freemarkerDemo.ftl", params);
+			String result=TemplateEngine.renderTemplate("freemarkerDemo.ftlh", params);
 			System.out.println(result);
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -1,6 +1,6 @@
 package com.xiaoshabao.example.module.base.classnew;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * static静态块测试

@@ -1,6 +1,6 @@
 package com.xiaoshabao.example.module.base.查找;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class 二分查找 {
 	//toIndex是结束的下标，但是不包括这个下标。

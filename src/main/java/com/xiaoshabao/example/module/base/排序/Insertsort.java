@@ -1,6 +1,6 @@
 package com.xiaoshabao.example.module.base.排序;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 /**
  * 插入排序
  *<p>从第二个元素开始，将该元素与前边的元素比较，

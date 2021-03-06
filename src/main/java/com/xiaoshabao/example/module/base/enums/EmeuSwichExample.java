@@ -1,6 +1,6 @@
 package com.xiaoshabao.example.module.base.enums;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class EmeuSwichExample {
 	

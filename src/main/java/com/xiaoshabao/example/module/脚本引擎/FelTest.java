@@ -1,6 +1,6 @@
 package com.xiaoshabao.example.module.脚本引擎;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import com.greenpineyu.fel.Expression;
 import com.greenpineyu.fel.FelEngine;

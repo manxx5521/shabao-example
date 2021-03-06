@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.apache.commons.configuration.Configuration;
 import org.apache.commons.configuration.PropertiesConfiguration;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 /**
  * commons读取配置文件
  * <p>包括读取properties、xml、ini等文件类型</p>

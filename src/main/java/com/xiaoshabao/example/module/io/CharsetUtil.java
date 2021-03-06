@@ -4,7 +4,7 @@ import java.io.File;
 import java.util.Collection;
 
 import org.apache.commons.io.FileUtils;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * 转换编码工具类

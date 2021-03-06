@@ -2,7 +2,7 @@ package com.xiaoshabao.example.module.base.file;
 
 import java.io.File;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 /**
  * 文件常用方法
  */

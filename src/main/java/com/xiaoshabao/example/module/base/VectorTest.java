@@ -4,7 +4,7 @@ import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.Vector;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class VectorTest {
 

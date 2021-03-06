@@ -45,7 +45,7 @@ public class IOCommonsImpl implements IOInterface {
 		// 源输入流
 		InputStream in = getInputStream();
 		// 目标路径
-		String dist = "E:\\test\\new.ftl";
+		String dist = "E:\\test\\new.ftlh";
 
 		try {
 			FileUtils.copyInputStreamToFile(in, new File(dist));
@@ -55,7 +55,7 @@ public class IOCommonsImpl implements IOInterface {
 	}
 
 	private InputStream getInputStream() {
-		return this.getClass().getResourceAsStream("/templates/demo.ftl");
+		return this.getClass().getResourceAsStream("/templates/demo.ftlh");
 	}
 
 }

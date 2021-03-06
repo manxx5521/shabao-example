@@ -5,7 +5,7 @@ import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import com.xiaoshabao.example.entity.test.PersionBean;
 

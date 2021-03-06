@@ -1,6 +1,6 @@
 package com.xiaoshabao.example.module.base.mothed;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class 方法重载 {
 	@Test

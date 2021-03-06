@@ -3,7 +3,7 @@ package com.xiaoshabao.example.module.configuration;
 import java.io.InputStream;
 import java.util.Properties;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * 读取配置文件properties方法

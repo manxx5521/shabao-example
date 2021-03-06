@@ -1,9 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.xiaoshabao</groupId>
+	<groupId>com.xiaoshabao.example</groupId>
 	<artifactId>shabao-example</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
 	<name>示例项目</name>
@@ -15,22 +15,32 @@
 	</properties>
 
 	<parent>
-		<groupId>com.xiaoshabao.base</groupId>
+		<groupId>com.xiaoshabao</groupId>
 		<artifactId>shabao-base-parent</artifactId>
-		<version>0.0.1</version>
+		<version>1.0.0</version>
 	</parent>
 
 	<dependencies>
 		<!-- 基础包 -->
 		<dependency>
-			<groupId>com.xiaoshabao.base</groupId>
-			<artifactId>shabao-base-mybatis</artifactId>
+			<groupId>com.xiaoshabao</groupId>
+			<artifactId>shabao-mybatis</artifactId>
 		</dependency>
 		<!-- 引入测试包 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<!--非test项目存在@Test屏蔽 <scope>test</scope> -->
+		</dependency>
+		<dependency>
+		    <groupId>org.junit.platform</groupId>
+		    <artifactId>junit-platform-launcher</artifactId>
+		    <scope>test</scope>
 		</dependency>
 		<!-- AOP支持 -->
 		<dependency>
@@ -126,8 +136,9 @@
 			<artifactId>xstream</artifactId>
 			<version>1.4.15</version>
 		</dependency>
+		
+		<!-- XML API 方式比较优秀的处理xml类 
 		<dependency>
-			<!-- XML API 方式比较优秀的处理xml类 -->
 			<groupId>dom4j</groupId>
 			<artifactId>dom4j</artifactId>
 			<exclusions>
@@ -137,6 +148,13 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		-->
+		<dependency>
+		    <groupId>org.dom4j</groupId>
+		    <artifactId>dom4j</artifactId>
+		    <version>2.1.3</version>
+		</dependency>
+				
 		<dependency>
 			<!-- 替换 -->
 			<groupId>jdom</groupId>

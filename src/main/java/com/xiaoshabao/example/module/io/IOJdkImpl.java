@@ -8,7 +8,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * JDK实现方式
@@ -74,7 +74,7 @@ public class IOJdkImpl implements IOInterface {
 		//源输入流
 		InputStream in= getInputStream();
 		//目标路径
-		String dist="E:\\test\\new.ftl";
+		String dist="E:\\test\\new.ftlh";
 		
 		int index;  
 	    byte[] bytes = new byte[1024];  
@@ -91,6 +91,6 @@ public class IOJdkImpl implements IOInterface {
 	}
 
 	private InputStream getInputStream() {
-		return this.getClass().getResourceAsStream("/templates/demo.ftl");
+		return this.getClass().getResourceAsStream("/templates/demo.ftlh");
 	}
 }

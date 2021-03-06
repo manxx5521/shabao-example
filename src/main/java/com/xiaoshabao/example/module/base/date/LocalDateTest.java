@@ -8,7 +8,7 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.TemporalAdjusters;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class LocalDateTest {
 	

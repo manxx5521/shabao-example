@@ -15,7 +15,7 @@ import javax.crypto.Cipher;
 
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.codec.binary.Hex;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * RSA加密算法

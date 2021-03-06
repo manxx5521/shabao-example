@@ -2,7 +2,7 @@ package com.xiaoshabao.example.module.io;
 
 import java.io.File;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class FilePathTest {
 
@@ -57,7 +57,7 @@ public class FilePathTest {
 	 */
 	@Test
 	public void test_classpath() {
-		this.getClass().getResourceAsStream("/templates/demo.ftl");
+		this.getClass().getResourceAsStream("/templates/demo.ftlh");
 //		FileUtils.copyInputStreamToFile(source, destination);
 	}
 	@Test

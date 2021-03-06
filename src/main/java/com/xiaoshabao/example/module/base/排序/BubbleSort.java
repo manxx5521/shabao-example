@@ -1,6 +1,6 @@
 package com.xiaoshabao.example.module.base.排序;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * 冒泡排序算法

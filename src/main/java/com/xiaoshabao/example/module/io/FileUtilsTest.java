@@ -7,9 +7,11 @@ import java.util.List;
 import org.apache.commons.compress.utils.CharsetNames;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.LineIterator;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.Before;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 /**
  * 文件操作类<br>
@@ -19,14 +21,14 @@ public class FileUtilsTest {
 
 	private String basePath = null;
 
-	@Before
+	@BeforeAll
 	public void setUp() {
 		// basePath = System.getProperty("user.dir") +
 		// File.separator+"file"+File.separator;
 		basePath = "D:\\test\\";
 	}
 
-	@After
+	@AfterAll
 	public void tearDown() throws Exception {
 	}
 

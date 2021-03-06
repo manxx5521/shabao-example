@@ -1,14 +1,15 @@
 package com.xiaoshabao.example.util;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.aspectj.lang.annotation.Before;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 public class DateUtilTest {
 	private static DateUtil bean = new DateUtil();
 
-	@Before
+	@BeforeAll
 	public void setUp() throws Exception {
 	}
 

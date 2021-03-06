@@ -1,6 +1,6 @@
 package com.xiaoshabao.example.module.base.接口;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import com.xiaoshabao.example.module.base.接口.able.interfaceAble;
 
